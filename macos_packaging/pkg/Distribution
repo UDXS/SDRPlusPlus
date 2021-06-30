@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+	<title>SDR++</title>
+	<pkg-ref id="sdrpp" version="0" onConclusion="none">#sdrpp.pkg</pkg-ref>
+	<welcome file="welcome.html" mime-type="text/html"></welcome>
+	<license file="license.html" mime-type="text/html"></license>
+	<conclusion file="conclusion.html" mime-type="text/html"></conclusion>
+	<background file="bg_light.png" alignment="bottomleft" mime-type="image/png"/>
+	<background-darkAqua file="bg_dark.png" mime-type="image/png"/>
+	<pkg-ref id="sdrpp">
+	<bundle-version/>
+</pkg-ref>
+<options customize="never" require-scripts="false" hostArchitectures="SDRPP_MAC_ARCH"/>
+<choices-outline>
+	<line choice="default">
+		<line choice="sdrpp"/>
+	</line>
+</choices-outline>
+<choice id="default"/>
+<choice id="sdrpp" visible="false" customLocation="/">
+	<pkg-ref id="sdrpp"/>
+</choice>
+</installer-gui-script>
