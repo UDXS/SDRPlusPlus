@@ -79,7 +79,7 @@ duk_ret_t test_func(duk_context *ctx) {
 
 // main
 int sdrpp_main(int argc, char *argv[]) {
-    spdlog::info("SDR++ Xv" VERSION_STR);
+    spdlog::info("SDR++ v" VERSION_STR);
 
     // Load default options and parse command line
     options::loadDefaults();
@@ -196,9 +196,6 @@ int sdrpp_main(int argc, char *argv[]) {
 #ifdef _WIN32
     defConfig["modulesDirectory"] = "./modules";
     defConfig["resourcesDirectory"] = "./res";
-#elif __APPLE__
-    defConfig["modulesDirectory"] = "../Plugins";
-    defConfig["resourcesDirectory"] = "../Resources";
 #else
     defConfig["modulesDirectory"] = INSTALL_PREFIX "/lib/sdrpp/plugins";
     defConfig["resourcesDirectory"] = INSTALL_PREFIX "/share/sdrpp";

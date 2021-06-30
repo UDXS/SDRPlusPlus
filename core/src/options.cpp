@@ -9,9 +9,6 @@ namespace options {
 #ifdef _WIN32
         opts.root = ".";
         opts.showConsole = false;
-#elif __APPLE__
-        std::string homedir = getenv("HOME");
-        opts.root = homedir + "/Library/Application Support/SDR++";
 #else
         std::string homedir = getenv("HOME");
         opts.root = homedir + "/.config/sdrpp";
